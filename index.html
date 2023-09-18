@@ -1,108 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/img/bulb.ico" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/x-icon" href="/img/bulb.ico">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css  "
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@600&family=Secular+One&display=swap"
+      rel="stylesheet"
+    />
+    <title>Dynamic JavaScript Quotes</title>
+  </head>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css  ">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@600&family=Secular+One&display=swap" rel="stylesheet">
-</head>
-<title>Dynamic JavaScript Quotes</title>
-</head>
+  <body>
+    <section class="vh-100" style="background-color: #eee">
+      <h1 class="title">Quotes</h1>
+      <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center">
+          <div class="col col-lg-9 col-xl-7">
+            <div class="card" style="border-radius: 15px">
+              <div class="card-body p-5">
+                <div class="text-center mb-4 pb-2">
+                  <img
+                    class="mx-auto"
+                    src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-quotes/bulb.webp"
+                    alt="Bulb"
+                    width="100"
+                  />
+                </div>
 
-<body>
-  <section class="vh-100" style="background-color: #eee;">
-  <h1 class="title">Quotes</h1>
-    <div class="container py-5 h-100">
-      <div class="row d-flex justify-content-center align-items-center">
-        <div class="col col-lg-9 col-xl-7">
-          <div class="card" style="border-radius: 15px;">
-            <div class="card-body p-5">
-
-              <div class="text-center mb-4 pb-2">
-                <img class="mx-auto" src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-quotes/bulb.webp"
-                  alt="Bulb" width="100">
+                <figure class="text-center mb-0">
+                  <blockquote class="blockquote">
+                    <p class="pb-3">
+                      <i class="fas fa-quote-left fa-xs text-primary"></i>
+                      <span id="quotes" class="lead font-italic"></span>
+                      <i class="fas fa-quote-right fa-xs text-primary"></i>
+                    </p>
+                  </blockquote>
+                  <figcaption
+                    id="author"
+                    class="blockquote-footer mb-0"
+                  ></figcaption>
+                </figure>
+                <!-- <button>New Quote</button> -->
+                <div class="text-center mt-3">
+                  <button
+                    id="newQ"
+                    type="button"
+                    class="btn btn-outline-dark mx-auto"
+                    data-mdb-ripple-color="dark"
+                  >
+                    New Quote
+                  </button>
+                </div>
               </div>
-
-              <figure class="text-center mb-0">
-                <blockquote class="blockquote">
-                  <p class="pb-3">
-                    <i class="fas fa-quote-left fa-xs text-primary"></i>
-                    <span id="quotes" class="lead font-italic"></span>
-                    <i class="fas fa-quote-right fa-xs text-primary"></i>
-                  </p>
-                </blockquote>
-                <figcaption id="author" class="blockquote-footer mb-0">
-                </figcaption>
-              </figure>
-              <!-- <button>New Quote</button> -->
-              <div class="text-center mt-3">
-                <button id="newQ" type="button" class="btn btn-outline-dark mx-auto" data-mdb-ripple-color="dark">New
-                  Quote</button>
-              </div>
-
             </div>
           </div>
         </div>
       </div>
+    </section>
+
+    <!-- Footer -->
+    <div class="footer">
+      <span class="creator">Sumit Tripathi</span>
+      <ul class="social-network social-circle">
+        <li>
+          <a
+            class="icoLinkedin"
+            href="https://www.linkedin.com/in/sumit-tripathi-932bb31b5/"
+            title="Linkedin"
+            target="_blank"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+        </li>
+        <li>
+          <a
+            class="icoTwitter"
+            href="https://twitter.com/iamSumit076"
+            title="Twitter"
+            target="_blank"
+            ><i class="fab fa-twitter"></i
+          ></a>
+        </li>
+        <li>
+          <a
+            class="icoFacebook"
+            href="https://www.facebook.com/sumittripathi07"
+            title="Facebook"
+            target="_blank"
+            ><i class="fab fa-facebook"></i
+          ></a>
+        </li>
+        <li>
+          <a
+            class="icoInstagram"
+            href="https://www.instagram.com/sumittripathi07/"
+            title="Instagram"
+            target="_blank"
+            ><i class="fab fa-instagram"></i
+          ></a>
+        </li>
+      </ul>
     </div>
-  </section>
 
+    <script>
+      const quotes = document.getElementById("quotes");
+      const author = document.getElementById("author");
+      const newQ = document.getElementById("newQ");
+      const getNewQuotes = (realData) => {
+        let rnum = Math.floor(Math.random() * 15);
 
-  <!-- Footer -->
-<div class="footer">
-  <span class="creator">Sumit Tripathi</span>
-  <ul class="social-network social-circle">
-      <li><a class="icoLinkedin" href="https://www.linkedin.com/in/sumit-tripathi-932bb31b5/" title="Linkedin" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-      <li><a class="icoTwitter" href="https://twitter.com/iamSumit076" title="Twitter" target="_blank"><i class="fab fa-twitter"></i></a></li>
-      <li><a class="icoFacebook" href="https://www.facebook.com/sumittripathi07" title="Facebook" target="_blank"><i class="fab fa-facebook"></i></a></li>
-      <li><a class="icoInstagram" href="https://www.instagram.com/sumittripathi07/" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a></li>
-  </ul>
-</div>
+        author.innerHTML = realData[rnum].author;
+        quotes.innerHTML = realData[rnum].text;
+      };
+      const grtQuotes = async () => {
+        const api = "https://type.fit/api/quotes";
+        try {
+          let data = await fetch(api);
+          realData = await data.json();
+          getNewQuotes(realData);
+        } catch (error) {}
+      };
+      newQ.addEventListener("click", grtQuotes);
+      grtQuotes();
+    </script>
 
-
-
-
-  <script>
-    const quotes = document.getElementById('quotes');
-    const author = document.getElementById('author');
-    const newQ = document.getElementById('newQ');
-    let realData = '';
-    const getNewQuotes = () => {
-      let rnum = Math.floor(Math.random() * 1000);
-      quotes.innerHTML = realData[rnum].text;
-      author.innerHTML = realData[rnum].author;
-
-    }
-    const grtQuotes = async () => {
-      const api = "https://type.fit/api/quotes";
-      try {
-        let data = await fetch(api);
-        realData = await data.json();
-        getNewQuotes();
-
-      } catch (error) {
-      }
-    }
-    newQ.addEventListener('click', getNewQuotes);
-    grtQuotes();
-  </script>
-
-
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
-    integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
-    integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
-    crossorigin="anonymous"></script>
-
-</body>
-
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+      integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+      integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
